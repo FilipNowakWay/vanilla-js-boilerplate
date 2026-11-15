@@ -17,7 +17,7 @@ The dev server runs at <http://localhost:8080>.
 | --------------- | ---------------------------------------------------- |
 | `npm run dev`   | Start the dev server with inline source maps         |
 | `npm run build` | Build minified files into `dist/`                    |
-| `npm run deploy`| Push `dist/` to the `gh-pages` branch via git subtree |
+| `npm run deploy`| Build and publish `dist/` to GitHub Pages         |
 
 ## Project structure
 
@@ -42,7 +42,7 @@ import "./styles/main.css";
 The empty folders ship with `.gitkeep` files so git tracks them. Once the folders contain real files, delete the placeholders:
 
 ```bash
-find . -name ".gitkeep" -type f -delete
+find src -name ".gitkeep" -type f -delete
 ```
 
 ## Optional: html-loader
@@ -76,3 +76,7 @@ If **no** — keep importing CSS and assets from JavaScript, and you don't need 
 ## Requirements
 
 Node.js 22.15 or newer.
+
+## License
+
+MIT — see [LICENSE](./LICENSE).
