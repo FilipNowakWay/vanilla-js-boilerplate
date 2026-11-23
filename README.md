@@ -22,6 +22,8 @@ The dev server runs at <http://localhost:8080>.
 | `npm run lint:fix`     | Fix auto-fixable ESLint errors                    |
 | `npm run format`       | Format files with Prettier                        |
 | `npm run format:check` | Check formatting without changing files           |
+| `npm test`             | Run the Jest test suite                           |
+| `npm run test:watch`   | Run Jest in watch mode                            |
 
 `npm run deploy` runs format first, so the published `dist/` is always built from formatted source. Lint is not part of the deploy pipeline — run it separately if needed.
 
@@ -50,6 +52,7 @@ src/
 ├── styles/        CSS files
 ├── index.js       application entry point
 └── template.html  HTML template used by HtmlWebpackPlugin
+tests/             Jest tests (mirrors src/)
 ```
 
 Styles and assets imported from JavaScript are bundled automatically:
@@ -63,7 +66,7 @@ import "./styles/main.css";
 The empty folders ship with `.gitkeep` files so git tracks them. Once the folders contain real files, delete the placeholders:
 
 ```bash
-find src -name ".gitkeep" -type f -delete
+find src tests -name ".gitkeep" -type f -delete
 ```
 
 ## Optional: html-loader
