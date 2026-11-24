@@ -42,6 +42,7 @@
     "@eslint/json": "^2.1.1",
     "@eslint/markdown": "^9.0.0",
     "@eslint/shell": "^0.1.2",
+    "@types/jest": "^30.0.0",
     "babel-jest": "^30.5.2",
     "css-loader": "^7.1.5",
     "eslint": "^10.15.0",
